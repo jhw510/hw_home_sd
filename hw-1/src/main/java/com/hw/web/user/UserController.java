@@ -24,14 +24,12 @@ public class UserController {
 	@PostMapping("/join")
 	public Messenger join(@RequestBody User user) {
 		int count = userService.count();
-		userService.saveFile(user);
-		// return (userService.count() == count + 1) ? Messenger.SUCCESS : Messenger.FAIL;
-		return Messenger.SUCCESS;
+		userService.add(user);
+		return (userService.count() == count + 1) ? Messenger.SUCCESS : Messenger.FAIL;
 	}
 	@GetMapping("/list")
 	public List<User> list(){
-		// return userService.list();
-		return userService.readFile();
+		return userService.list();
 	}
 	
 	@PostMapping("/login")
@@ -60,9 +58,7 @@ public class UserController {
 		System.out.println("delete 정보 ::: "+userid);
 		return (userService.remove(userid)) ? Messenger.SUCCESS: Messenger.FAIL;
 	}
-	@GetMapping("/idscanner/{userid}")
-	public Messenger idscanner(@PathVariable String userid) {
-		System.out.println("아이디 중복 정보 ::: "+userid);
-		return (userService.idscanner(userid)) ? Messenger.SUCCESS: Messenger.FAIL;
-	}
+	
 }
+
+

@@ -3,25 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>My Page</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body class="bg-light">
 
-	<div class="container">
-		<div class="py-5 text-center">
-			<a  data-montelena-acode="200003381" data-montelena-floating_yn="N" data-montelena-tour_yn="N">
-			<img src="//pics.gmarket.co.kr/pc/single/kr/common/image__logo.png" width="240" height="113" class="image__logo" ></a>
-			
-			<h2>수정 페이지</h2>
-		</div>
-    
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2>수정 페이지</h2>
+      </div>
+
       <div class="row">
         
         <div class="col-md-8 order-md-1">
@@ -29,8 +23,8 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="name">이름</label>
-                 <div class="input-group mb-3">
-				  <input id="name" type="text" class="form-control"  aria-describedby="basic-addon1">
+                <div class="input-group mb-3">
+				  <input id="name" type="text" class="form-control" aria-describedby="basic-addon1">
 				</div>
               </div>
             </div>
@@ -49,7 +43,7 @@
             </div>
             <div class="mb-3">
               <label for="ssn">주민번호</label>
-             <nav aria-label="breadcrumb">
+              <nav aria-label="breadcrumb">
 				  <ol class="breadcrumb"><li id="ssn" class="breadcrumb-item active" aria-current="page"></li></ol>
 			    </nav>
             </div>
@@ -59,22 +53,22 @@
 				  <input id="passwd" type="text" class="form-control" aria-describedby="basic-addon1">
 				</div>
             </div>
+            <div style="height: 50px"></div>
             <button id="confirm_button" class="btn btn-success btn-lg btn-block" type="submit">수정 확인</button>
-            <button id="concel_button" class="btn btn-warning btn-lg btn-block" type="submit">수정 취소</button>
-            <button id="remove_button" class="btn btn-danger btn-lg btn-block" type="submit">회원 탈퇴</button>
+            <button id="cancel_button" class="btn btn-warning btn-lg btn-block" type="submit">수정 취소 </button>
+            <button id="remove_button" class="btn btn-danger btn-lg btn-block" type="submit">회원 탈퇴 </button>
           </form>
         </div>
       </div>
 
-
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 꺄르를</p>
+        <p class="mb-1">© 2017-2018 Company Name</p>
         <ul class="list-inline">
         </ul>
       </footer>
     </div>
-	<script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
+
+    <script>
       (function() {
         'use strict';
 
@@ -100,18 +94,18 @@
     	  $('#addr').val(d.addr)
     	  $('#ssn').text(d.ssn)
     	  $('#passwd').val(d.passwd)
-      const name = $('#name').val()
-      const addr = $('#addr').val()
-      const passwd = $('#passwd').val()
-       alert(' 수정 전 정보 >>>>>>>> '+name +','+addr+','+passwd)
+    	  const name = $('#name').val()
+	      const addr = $('#addr').val()
+	      const passwd = $('#passwd').val()
+	      alert(' 수정 전 정보 >>>>>>>> '+name +','+addr+','+passwd)
+	      $('#cancel_button').click(e => {
+	    	  e.preventDefault()
+	    	  location.href = 'mypage.html'
+	      })
       
-      $('#cancel_button').click(e => {
-    	  e.preventDefault()
-    	  location.href = 'mypage.html'
-      })
       $('#confirm_button').click(e=>{
     	  alert(' 수정 하려는 정보 >>>>>>>> '+$('#name').val()  +','+$('#addr').val() +','+$('#passwd').val())
-    	   if(name === $('#name').val() 
+    	  if(name === $('#name').val() 
     			  && addr === $('#addr').val() 
     			  && passwd === $('#passwd').val()){
     		  alert('변경사항이 없습니다')
@@ -161,9 +155,10 @@
     		  
     	  })
       })
-      })
+   })
+      
     </script>
-
+  
 
 </body>
 </html>
