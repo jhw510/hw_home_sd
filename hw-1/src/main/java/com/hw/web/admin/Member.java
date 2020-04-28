@@ -1,4 +1,4 @@
-package com.hw.web.member;
+package com.hw.web.admin;
 import lombok.Data;
 @Data
 public class Member {

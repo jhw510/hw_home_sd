@@ -1,4 +1,4 @@
-package com.hw.web.member;
+package com.hw.web.admin;
 
 import org.springframework.stereotype.Service;
 

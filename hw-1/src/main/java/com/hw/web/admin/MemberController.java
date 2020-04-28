@@ -1,4 +1,4 @@
-package com.hw.web.member;
+package com.hw.web.admin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

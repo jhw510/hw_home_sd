@@ -1,4 +1,4 @@
-package com.hw.web.member;
+package com.hw.web.admin;
 
 public interface MemberService {
 public void add(Member member);
