@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        min-height: 100%;
+    }
+
+    .border_black {
+        border: 1px solid black;
+    }
+
+    .center {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .width_full {
+        width: '100%';
+        height: '100%'
+    }
+</style>
+<body>
+ 	<table id="main">
+ 	<tr id="top"><td colspan="2"></td><td></td></tr>
+ 	<tr id="middle"><td colspan="3"></td></tr>
+ 	<tr id="middle_2"><td colspan="3" ><div><img src ="movee.png" class="width_full" /></div></td></tr>
+ 	<tr id="last"><td><div><img src = "sin.png" class="width_full" /></div></td>
+ 	<td><div><img src = "sinnn.jpg" class="width_full" /></div></td>
+ 	<td><div><img src = "goo.png" class="width_full" /></div></td></tr>
+ 	<tr id="last_2"><td colspan="3"></td></tr>
+ 	</table>
+<script >
+
+$('#main').css({ width: '80%', height: '100%' }).addClass('border_black center')
+     $('#top').css({ width: '80%', height: '10%' }).addClass('border_black center')
+     $('#middle').css({ width: '80%', height: '5%' }).addClass('border_black center')
+      $('#middle_2').css({ width: '80%', height: '50%' }).addClass('border_black center')
+     $('#last').css({ width: '80%', height: '30%' }).addClass('border_black center')
+      $('#last_2').css({ width: '80%', height: '5%' }).addClass('border_black center')
+     $('#main td').addClass('border_black') 
+     </script>
+</body>
+</html>
