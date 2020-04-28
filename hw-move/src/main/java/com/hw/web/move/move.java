@@ -7,7 +7,7 @@ import lombok.ToString;
 
 @Getter @Setter
 public class move{
-	private String userid,passwd,name,ssn, addr;
+	private String userid,passwd,name,ssn, addr,age;
 	@Override
 	public String toString() {
 		return String.format("%s,%s,%s,%s,%s", userid,passwd,name,ssn, addr);
