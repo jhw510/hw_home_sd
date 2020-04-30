@@ -8,14 +8,17 @@
 <style>
     html,
     body {
+        background-color :#EEDAC1;
         width: 100%;
         height: 100%;
         overflow: hidden;
         min-height: 100%;
+        
     }
-
-    .border_black {
-        border: 1px solid black;
+    .color{background-color : white;}
+	.wrap{font-size:40px;}
+    .border {
+        border: 3px solid #A48A7B;
     }
 
     .center {
@@ -30,23 +33,41 @@
 </style>
 <body>
  	<table id="main">
- 	<tr id="top"><td colspan="2"></td><td></td></tr>
- 	<tr id="middle"><td colspan="3"></td></tr>
- 	<tr id="middle_2"><td colspan="3" ><div><img src ="movee.png" class="width_full" /></div></td></tr>
- 	<tr id="last"><td><div><img src = "sin.png" class="width_full" /></div></td>
- 	<td><div><img src = "sinnn.jpg" class="width_full" /></div></td>
- 	<td><div><img src = "goo.png" class="width_full" /></div></td></tr>
- 	<tr id="last_2"><td colspan="3"></td></tr>
+ 	<tr id="top"><td colspan="2">
+ 	<div><img src ="logo.png" width =120px height=80px align="left"/></div>
+				 <input id="search" style="width:500px;height:50px;float:left;margin-left:50px" type="text">
+                <input id="search_button" style="width:150px;height:50px;float:left;margin-left:50px;background-color: #3f73c2; color: white" type="button" value="검색"> <br>
+ 	</td><td>
+ 	<a id="admin_re" style="cursor:pointer;text-decoration: underline">관리자등록</a>
+ 	<a id="admin_jo" style="cursor:pointer;text-decoration: underline">관리자접속</a>
+ 	</td></tr>
+ 	
+ 	<tr id="middle_2"><td colspan="3" >
+ 	<div>
+ 	<video autoplay="autoplay" loop="loop" muted="muted" webkit-playsinline="webkit-playsinline" playsinline="playsinline" style="width: 800px;">
+                                <source src="move.mp4" >
+                            </video></div>
+ 	</td></tr>
+ 	<tr id="last"><td class = "color"><div><img src = "sin.png"  width="100%" height="100px" /></div></td>
+ 	<td  class = "color"><div><img src = "sinnn.jpg" width="100%" height="150px"  /></div></td>
+ 	<td class = "color"><div><img src = "goo.png" width="100%" height="100px"  /></div></td></tr>
+ 	<tr id="last_2"><td colspan="3" >
+ 	<div class = "wrap">안녕</div></td></tr>
  	</table>
 <script >
 
-$('#main').css({ width: '80%', height: '100%' }).addClass('border_black center')
-     $('#top').css({ width: '80%', height: '10%' }).addClass('border_black center')
-     $('#middle').css({ width: '80%', height: '5%' }).addClass('border_black center')
-      $('#middle_2').css({ width: '80%', height: '50%' }).addClass('border_black center')
-     $('#last').css({ width: '80%', height: '30%' }).addClass('border_black center')
-      $('#last_2').css({ width: '80%', height: '5%' }).addClass('border_black center')
-     $('#main td').addClass('border_black') 
+$('#main').css({ width: '80%', height: '100%' ,border:'4px solid #A48A7B'}).addClass('center')
+     $('#top').css({ width: '80%', height: '10%' }).addClass('border center')
+      $('#middle_2').css({ width: '80%', height: '50%' }).addClass('border center')
+     $('#last').css({ width: '80%', height: '30%' }).addClass('border center')
+      $('#last_2').css({ width: '80%', height: '5%' }).addClass('border center')
+     $('#main td').addClass('border') 
+     $('#admin_re')
+     .css('cursor','pointer')
+     .click(e =>{
+    	 e.preventDefault()
+    	location.href ='register.html'
+     })
      </script>
 </body>
 </html>
